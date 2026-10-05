@@ -105,8 +105,8 @@ function BmiNumber({ value }: { value: number }) {
 }
 
 export function BMICalculator() {
-  const [height, setHeight] = useState<number>(170)
-  const [weight, setWeight] = useState<number>(65)
+  const [height, setHeight] = useState<number>(180)
+  const [weight, setWeight] = useState<number>(70)
   const [copied, setCopied] = useState(false)
   const { translations } = useLanguage()
 
