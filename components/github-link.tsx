@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/hooks/use-language"
 
-export const REPO_URL = "https://github.com/fangyuan99/real-time-bmi-calculator"
+export const REPO_URL = "https://github.com/fangyuan99/leanpath"
 
 export function GitHubMark({ className }: { className?: string }) {
   return (

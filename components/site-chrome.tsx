@@ -43,7 +43,7 @@ export function SiteFooter() {
         className="inline-flex items-center gap-1.5 underline-offset-4 transition-colors hover:text-foreground hover:underline"
       >
         <GitHubMark className="size-3.5" />
-        fangyuan99/real-time-bmi-calculator
+        fangyuan99/leanpath
       </a>
     </footer>
   )

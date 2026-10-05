@@ -2,7 +2,7 @@
 
 <!-- Chinese Badges -->
 <p align="center">
-  <a href="https://github.com/fangyuan99/real-time-bmi-calculator/stargazers"><img src="https://img.shields.io/github/stars/fangyuan99/real-time-bmi-calculator?style=flat-square&logo=github&label=%E7%82%B9%E8%B5%9E%E6%95%B0" alt="Stars"></a>
+  <a href="https://github.com/fangyuan99/leanpath/stargazers"><img src="https://img.shields.io/github/stars/fangyuan99/leanpath?style=flat-square&logo=github&label=%E7%82%B9%E8%B5%9E%E6%95%B0" alt="Stars"></a>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
   <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js">
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
@@ -48,11 +48,11 @@
 
 1.  **克隆仓库:**
     ```bash
-    git clone https://github.com/fangyuan99/real-time-bmi-calculator.git
+    git clone https://github.com/fangyuan99/leanpath.git
     ```
 2.  **进入项目目录:**
     ```bash
-    cd real-time-bmi-calculator
+    cd leanpath
     ```
 3.  **安装依赖:**
     ```bash
@@ -79,7 +79,7 @@
 
 <!-- English Badges -->
 <p align="center">
-  <a href="https://github.com/fangyuan99/real-time-bmi-calculator/stargazers"><img src="https://img.shields.io/github/stars/fangyuan99/real-time-bmi-calculator?style=flat-square&logo=github" alt="GitHub stars"></a>
+  <a href="https://github.com/fangyuan99/leanpath/stargazers"><img src="https://img.shields.io/github/stars/fangyuan99/leanpath?style=flat-square&logo=github" alt="GitHub stars"></a>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
   <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js">
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
@@ -122,11 +122,11 @@ A simple web application built with Next.js (React) to calculate Body Mass Index
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/fangyuan99/real-time-bmi-calculator.git
+    git clone https://github.com/fangyuan99/leanpath.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd real-time-bmi-calculator
+    cd leanpath
     ```
 3.  **Install dependencies:**
     ```bash
