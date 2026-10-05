@@ -32,7 +32,7 @@ export default function RootLayout({
         <meta name="color-scheme" content="light dark" />
       </head>
       <body className={`${sans.variable} ${display.variable} font-sans antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="bmi-theme">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange storageKey="bmi-theme">
           <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>

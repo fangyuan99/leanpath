@@ -160,7 +160,7 @@ export function BMICalculator() {
     >
       <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
         {/* Result */}
-        <section aria-labelledby="bmi-result-label" className="relative animate-in fade-in slide-in-from-bottom-4 duration-1000 fill-mode-both">
+        <section aria-labelledby="bmi-result-label" className="relative animate-in fade-in slide-in-from-bottom-4 duration-1000 fill-mode-both transition-none">
           <div
             aria-hidden
             className="pointer-events-none absolute -left-24 -top-32 -z-10 size-[28rem] rounded-full opacity-[0.22] blur-3xl transition-colors duration-700 dark:opacity-[0.16] lg:size-[36rem]"
@@ -244,7 +244,7 @@ export function BMICalculator() {
         </section>
 
         {/* Inputs */}
-        <section className="animate-in fade-in slide-in-from-bottom-6 delay-150 duration-1000 fill-mode-both rounded-[1.75rem] border bg-card/70 p-6 shadow-[0_1px_0_0_hsl(var(--foreground)/0.04),0_24px_60px_-28px_rgb(0_0_0/0.25)] backdrop-blur-xl sm:p-8">
+        <section className="animate-in fade-in slide-in-from-bottom-6 delay-150 duration-1000 fill-mode-both transition-none rounded-[1.75rem] border bg-card/70 p-6 shadow-[0_1px_0_0_hsl(var(--foreground)/0.04),0_24px_60px_-28px_rgb(0_0_0/0.25)] backdrop-blur-xl sm:p-8">
           <MeasureField
             id="height"
             label={translations.height}
@@ -292,7 +292,7 @@ export function BMICalculator() {
       </div>
 
       {/* Explanation */}
-      <Accordion type="single" collapsible className="mt-16 border-t animate-in fade-in delay-300 duration-1000 fill-mode-both lg:mt-24">
+      <Accordion type="single" collapsible className="mt-16 border-t animate-in fade-in delay-300 duration-1000 fill-mode-both transition-none lg:mt-24">
         <AccordionItem value="explanation" className="border-b">
           <AccordionTrigger className="py-5 text-left font-display text-2xl font-normal hover:no-underline">
             {translations.bmiExplanation}

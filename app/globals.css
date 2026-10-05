@@ -125,3 +125,10 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Theme switch: the new theme is revealed by a clip-path animation instead of a crossfade */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}

@@ -19,7 +19,10 @@
 
 一个使用 Next.js (React) 构建的简单 Web 应用，根据用户输入的身高和体重实时计算身体质量指数 (BMI)。
 
-![web.png](./public/web.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./public/web_dark.jpg">
+  <img src="./public/web.jpg" alt="实时 BMI 计算器截图">
+</picture>
 
 
 ## ✨ 功能
@@ -90,7 +93,10 @@
 
 A simple web application built with Next.js (React) to calculate Body Mass Index (BMI) in real-time based on user input for height and weight.
 
-![web_en.png](./public/web_en.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./public/web_en_dark.jpg">
+  <img src="./public/web_en.jpg" alt="Real-time BMI Calculator screenshot">
+</picture>
 
 
 ## ✨ Features
