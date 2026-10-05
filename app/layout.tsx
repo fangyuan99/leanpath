@@ -1,16 +1,24 @@
 import type React from "react"
 import "@/app/globals.css"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Geist, Instrument_Serif } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/hooks/use-language"
 
-const inter = Inter({ subsets: ["latin"] })
+const sans = Geist({ subsets: ["latin"], variable: "--font-sans" })
+const display = Instrument_Serif({ subsets: ["latin"], weight: "400", variable: "--font-display" })
 
 export const metadata: Metadata = {
-  title: "BMI Calculator",
-  description: "Calculate your BMI based on Chinese standards",
-    generator: 'v0.dev'
+  title: "Real-time BMI Calculator · 实时 BMI 计算器",
+  description:
+    "Calculate your BMI in real time based on Chinese standards, and see the healthy weight range for your height.",
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#faf9f7" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c0c0e" },
+  ],
 }
 
 export default function RootLayout({
@@ -23,14 +31,8 @@ export default function RootLayout({
       <head>
         <meta name="color-scheme" content="light dark" />
       </head>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-          storageKey="bmi-theme"
-        >
+      <body className={`${sans.variable} ${display.variable} font-sans antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="bmi-theme">
           <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>

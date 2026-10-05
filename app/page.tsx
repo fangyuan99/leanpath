@@ -1,20 +1,14 @@
 import { BMICalculator } from "@/components/bmi-calculator"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { LanguageToggle } from "@/components/language-toggle"
+import { SiteFooter, SiteHeader } from "@/components/site-chrome"
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8">
-      <div className="w-full max-w-md mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-2xl font-bold">BMI Calculator</h1>
-          <div className="flex items-center gap-2">
-            <LanguageToggle />
-            <ThemeToggle />
-          </div>
-        </div>
+    <div className="relative flex min-h-dvh flex-col overflow-x-clip">
+      <SiteHeader />
+      <main className="mx-auto w-full max-w-6xl flex-1 px-5 pb-16 pt-6 sm:px-8 lg:pt-16">
         <BMICalculator />
-      </div>
-    </main>
+      </main>
+      <SiteFooter />
+    </div>
   )
 }

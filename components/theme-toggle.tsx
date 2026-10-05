@@ -1,12 +1,13 @@
 "use client"
 
 import { useTheme } from "next-themes"
-import { Button } from "@/components/ui/button"
 import { Moon, Sun } from "lucide-react"
 import { useEffect, useState } from "react"
+import { useLanguage } from "@/hooks/use-language"
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
+  const { translations } = useLanguage()
   const [mounted, setMounted] = useState(false)
 
   // Avoid hydration mismatch by only rendering after mount
@@ -14,26 +15,22 @@ export function ThemeToggle() {
     setMounted(true)
   }, [])
 
-  const toggleTheme = () => {
-    console.log("Current theme:", resolvedTheme)
-    setTheme(resolvedTheme === "dark" ? "light" : "dark")
-  }
-
-  if (!mounted) {
-    return (
-      <Button variant="outline" size="icon" aria-label="Toggle theme">
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
-      </Button>
-    )
-  }
+  const isDark = mounted && resolvedTheme === "dark"
 
   return (
-    <Button variant="outline" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
-      {resolvedTheme === "dark" ? (
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
-      ) : (
-        <Moon className="h-[1.2rem] w-[1.2rem]" />
-      )}
-    </Button>
+    <button
+      type="button"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={translations.toggleTheme}
+      title={translations.toggleTheme}
+      className="relative grid size-9 place-items-center overflow-hidden rounded-full border bg-background/60 backdrop-blur transition-colors hover:border-foreground/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:scale-95"
+    >
+      <Sun
+        className={`absolute size-4 transition-all duration-500 ${isDark ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"}`}
+      />
+      <Moon
+        className={`absolute size-4 transition-all duration-500 ${isDark ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"}`}
+      />
+    </button>
   )
 }

@@ -1,22 +1,38 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/hooks/use-language"
-import { Globe } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 export function LanguageToggle() {
-  const { language, toggleLanguage } = useLanguage()
+  const { language, toggleLanguage, translations } = useLanguage()
 
   return (
-    <Button
-      variant="outline"
-      size="icon"
+    <button
+      type="button"
       onClick={toggleLanguage}
-      aria-label="Toggle language"
-      title={language === "en" ? "Switch to Chinese" : "切换到英文"}
+      aria-label={translations.switchLanguage}
+      title={translations.switchLanguage}
+      className="relative flex h-9 items-center rounded-full border bg-background/60 p-0.5 text-xs font-medium backdrop-blur transition-colors hover:border-foreground/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
     >
-      <Globe className="h-[1.2rem] w-[1.2rem]" />
-      <span className="sr-only">{language === "en" ? "Switch to Chinese" : "切换到英文"}</span>
-    </Button>
+      <span
+        aria-hidden
+        className={cn(
+          "absolute inset-y-0.5 left-0.5 w-8 rounded-full bg-foreground transition-transform duration-300 ease-out",
+          language === "zh" && "translate-x-8",
+        )}
+      />
+      {(["en", "zh"] as const).map((lang) => (
+        <span
+          key={lang}
+          aria-hidden
+          className={cn(
+            "relative z-10 grid h-full w-8 place-items-center transition-colors duration-300",
+            language === lang ? "text-background" : "text-muted-foreground",
+          )}
+        >
+          {lang === "en" ? "EN" : "中"}
+        </span>
+      ))}
+    </button>
   )
 }

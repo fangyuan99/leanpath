@@ -26,6 +26,9 @@
 
 *   **实时计算:** 在您输入身高和体重时即时计算 BMI。
 *   **BMI 分类:** 清晰显示 BMI 所属分类（例如：体重过轻、正常、超重、肥胖）。
+*   **可拖动 BMI 标尺:** 拖动标尺设定目标 BMI，体重随之实时变化；支持点击跳转与键盘操作。
+*   **健康体重区间:** 显示当前身高对应的健康体重范围，以及达到健康范围需要增减的体重。
+*   **可分享链接:** 身高体重同步到 URL 并保存在本地，一键复制链接分享。
 *   **响应式设计:** 使用 Tailwind CSS 适配不同屏幕尺寸。
 
 ## 🛠️ 技术栈
@@ -42,7 +45,7 @@
 
 1.  **克隆仓库:**
     ```bash
-    git clone https://github.com/your-username/real-time-bmi-calculator.git
+    git clone https://github.com/fangyuan99/real-time-bmi-calculator.git
     ```
 2.  **进入项目目录:**
     ```bash
@@ -94,6 +97,9 @@ A simple web application built with Next.js (React) to calculate Body Mass Index
 
 *   **Real-time Calculation:** BMI is calculated instantly as you type your height and weight.
 *   **BMI Categories:** Clearly indicates the BMI category (e.g., Underweight, Normal, Overweight, Obese).
+*   **Draggable BMI Scale:** Drag the scale to set a target BMI and watch the weight follow; click-to-jump and keyboard control included.
+*   **Healthy Weight Range:** Shows the healthy weight range for your height and how much to gain or lose to reach it.
+*   **Shareable Links:** Height and weight are synced to the URL and saved locally; copy a link in one click.
 *   **Responsive Design:** Adapts to different screen sizes using Tailwind CSS.
 
 ## 🛠️ Tech Stack
@@ -110,7 +116,7 @@ A simple web application built with Next.js (React) to calculate Body Mass Index
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/real-time-bmi-calculator.git
+    git clone https://github.com/fangyuan99/real-time-bmi-calculator.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
